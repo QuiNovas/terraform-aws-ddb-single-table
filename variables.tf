@@ -23,12 +23,13 @@ variable "name" {
 
 variable "gsi" {
   default     = []
-  description = "List of GSI's"
-  type = list(object({
-    projection_attributes = list(string)
-    range_key             = string
+  description = "List of GSI's. Requires 'projection_attributes' a list of string. Requires range_key can be true or false. If billing mode is provisioned, then read and write capacities are needed"
+  type = any
+  # list(object({
+  #   projection_attributes = list(string)
+  #   range_key             = string
 
-  }))
+  # }))
 }
 
 variable "lsi" {
