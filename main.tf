@@ -22,5 +22,5 @@ module "single_table" {
   name = var.name
 
   source  = "QuiNovas/dynamodb-table/aws"
-  version = "3.0.6"
+  version = "3.0.7"
 }
